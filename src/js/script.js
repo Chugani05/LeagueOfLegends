@@ -14,6 +14,7 @@ button.addEventListener("click", () => {
 
     // Call the getLegend() function, which will begin the process of showing the Pokémon
     getLegend();
+    showLegend();
 });
 
 // Async function to fetch champions from the API
@@ -36,7 +37,7 @@ async function getLegend() {
 }
 
 // This function is responsible for displaying the champions stored in the legends array in the DOM
-const getLegend = async () => {
+const showLegend = async () => {
     // Get a reference to the element with ID 'lol' where champion cards will be inserted
     const legendsContainer = document.getElementById("lol");
 
@@ -46,7 +47,7 @@ const getLegend = async () => {
         let secondaryRole = legends[i].tags[1] || ""; // Second role, if any (fallback to empty string if not present)
 
         // For each champion, create a card with images (champion splash), name, roles, abilities, and stats
-        // This HTML structure is dynamically added to the 'pokedex' container
+        // This HTML structure is dynamically added to the 'lol' container
         legendsContainer.innerHTML += `<div class="card">
                                           <img src="${legends[i].image}" alt="${legends[i].name}">
                                           <br>
@@ -56,9 +57,6 @@ const getLegend = async () => {
                                           </div>
                                           <div class="blurb">
                                               Description: ${legends[i].blurb}<br>
-                                          </div>
-                                          <div class="roles">
-                                              Roles: ${primaryRole} ${secondaryRole}
                                           </div>
                                           <div class="stats">
                                               Attack: ${legends[i].attack}, Defense: ${legends[i].defense}, Magic: ${legends[i].magic}, Difficulty: ${legends[i].difficulty}
