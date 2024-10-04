@@ -34,3 +34,35 @@ async function getLegend() {
     // Remove the "Loading data..." message from the DOM once the data is loaded
     loadingDataText.remove();
 }
+
+// This function is responsible for displaying the champions stored in the legends array in the DOM
+const getLegend = async () => {
+    // Get a reference to the element with ID 'lol' where champion cards will be inserted
+    const legendsContainer = document.getElementById("lol");
+
+    // Iterate over each element in the legends array
+    for (let i = 0; i < legends.length; i++) {
+        let primaryRole = legends[i].tags[0]; // First role of the champion (e.g., Fighter, Mage)
+        let secondaryRole = legends[i].tags[1] || ""; // Second role, if any (fallback to empty string if not present)
+
+        // For each champion, create a card with images (champion splash), name, roles, abilities, and stats
+        // This HTML structure is dynamically added to the 'pokedex' container
+        legendsContainer.innerHTML += `<div class="card">
+                                          <img src="${legends[i].image}" alt="${legends[i].name}">
+                                          <br>
+                                          ${legends[i].name}<br>
+                                          <div class="title">
+                                              Title: ${legends[i].title}<br>
+                                          </div>
+                                          <div class="blurb">
+                                              Description: ${legends[i].blurb}<br>
+                                          </div>
+                                          <div class="roles">
+                                              Roles: ${primaryRole} ${secondaryRole}
+                                          </div>
+                                          <div class="stats">
+                                              Attack: ${legends[i].attack}, Defense: ${legends[i].defense}, Magic: ${legends[i].magic}, Difficulty: ${legends[i].difficulty}
+                                          </div>
+                                      </div>`;
+    }
+}
