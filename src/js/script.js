@@ -1,7 +1,6 @@
 import Legend from "./legends.js"; // Import the Legend class from the legends.js file
 
 let legends = []; // Array where instances of champions (legends) will be stored
-const loadingDataText = document.getElementById('loading-data-text'); // HTML element that shows the "Loading data..." message
 
 const button = document.querySelector("button"); // Select the button in the DOM
 
@@ -19,6 +18,7 @@ button.addEventListener("click", () => {
 
 // Async function to fetch champions from the API
 async function getLegend() {
+    const loadingDataText = document.getElementById('loading-data-text'); // HTML element that shows the "Loading data..." message
     const url = "https://ddragon.leagueoflegends.com/cdn/13.18.1/data/es_ES/champion.json"; // API URL with champion data
     const response = await fetch(url); // Send a request to the API
     const data = (await response.json()).data; // Parse the response to JSON and access the "data" property that contains the champions
