@@ -6,7 +6,6 @@ export default class Legend {
         this.image = "https://ddragon.leagueoflegends.com/cdn/13.18.1/img/champion/" + data.image.full;
         this.title = data.title;
         this.tags = data.tags;
-        this.blurb = data.blutb;
         this.attack = data.info.attack
         this.defense = data.info.defense
         this.magic = data.info.magic

@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global style */
 body {
     background-color: #0C0E14; /* Oscuro como el tema de LOL */
     color: #D4AF37; /* Dorado para los textos principales */
@@ -29,17 +29,30 @@ button:hover {
     background-color: #FFD700;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+/* Container for the cards */
+#lol {
+    display: flex; /* Activate flexbox */
+    flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Add spacing between cards */
+}
 
-    nav ul li {
-        margin: 10px 0;
-    }
+/* Cards */
+.card {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(24, 24, 24), rgb(43, 42, 42));
+    text-align: center;
+    padding: 20px;
+    width: 250px; /* Set a fixed width for the cards */
+}
 
-    main {
-        padding: 20px;
-    }
+.card:hover {
+    transform: scale(1.25); /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
 }
