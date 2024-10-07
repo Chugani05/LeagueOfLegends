@@ -27,14 +27,19 @@ button.addEventListener("click", async () => {
 
 // Async function to fetch champions from the API
 async function getLegend() {
-    const url = "https://ddragon.leagueoflegends.com/cdn/13.18.1/data/es_ES/champion.json"; // API URL with champion data
-    const response = await fetch(url); // Send a request to the API
-    const data = (await response.json()).data; // Parse the response to JSON and access the "data" property that contains the champions
-    
-    // Loop through each champion (legend) in the data obtained from the API
-    for (let legend in data) {
-        // Create a new instance of the Legend class for each champion and add it to the legends array
-        legends.push(new Legend(data[legend]));
+    try {
+        const url = "https://ddragon.leagueoflegends.com/cdn/13.18.1/data/es_ES/champion.json"; // API URL with champion data
+        const response = await fetch(url); // Send a request to the API
+        const data = (await response.json()).data; // Parse the response to JSON and access the "data" property that contains the champions
+        
+        // Loop through each champion (legend) in the data obtained from the API
+        for (let legend in data) {
+            // Create a new instance of the Legend class for each champion and add it to the legends array
+            legends.push(new Legend(data[legend]));
+        }
+    } 
+    catch (error) {
+        console.error("No se ha podido descargar los datos de la API, error $(error)")
     }
 
     // Hide the "Loading data..." message once the data is loaded
