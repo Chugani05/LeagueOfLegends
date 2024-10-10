@@ -63,7 +63,7 @@ const showLegend = () => {
                         <div class="name">${legends[i].name}</div>
                         <img src="${legends[i].image}" alt="${legends[i].name}">
                         <div class="title">Title: ${legends[i].title}</div>
-                        <div class="title">Tags: ${legends[i].tags && legends[i].tags.length > 0 ? legends[i].tags.join(' & ') : 'No tags available'}</div>
+                        <div class="tags">Tags: ${legends[i].tags && legends[i].tags.length > 0 ? legends[i].tags.join(' & ') : 'No tags available'}</div>
                         <div class="stats">
                             Attack: ${legends[i].attack}, 
                             Defense: ${legends[i].defense}, 
@@ -72,7 +72,7 @@ const showLegend = () => {
                         </div>
                     </div>
                     <div class="card-back">
-                        <div>${legends[i].story}</div>
+                        <div class="description">${legends[i].story}</div>
                     </div>
                 </div>
             </div>`;
