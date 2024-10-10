@@ -56,22 +56,25 @@ const showLegend = () => {
 
         // For each champion, create a card with images (champion splash), name, roles, abilities, and stats
         // This HTML structure is dynamically added to the 'lol' container
-        legendsContainer.innerHTML += `<div class="card">
-                                            <div class="name">
-                                                ${legends[i].name}
-                                            </div>
-                                            <br>
-                                            <img src="${legends[i].image}" alt="${legends[i].name}">
-                                            <br>
-                                            <div class="title">
-                                                Title: ${legends[i].title}<br>
-                                            </div>
-                                            <div class="title">
-                                                Tags: ${legends[i].tags && legends[i].tags.length > 0 ? legends[i].tags.join(' & ') : 'No tags available'}<br>
-                                            </div>
-                                            <div class="stats">
-                                                Attack: ${legends[i].attack}, Defense: ${legends[i].defense}, Magic: ${legends[i].magic}, Difficulty: ${legends[i].difficulty}
-                                            </div>
-                                      </div>`;
+        legendsContainer.innerHTML += `
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="name">${legends[i].name}</div>
+                        <img src="${legends[i].image}" alt="${legends[i].name}">
+                        <div class="title">Title: ${legends[i].title}</div>
+                        <div class="title">Tags: ${legends[i].tags && legends[i].tags.length > 0 ? legends[i].tags.join(' & ') : 'No tags available'}</div>
+                        <div class="stats">
+                            Attack: ${legends[i].attack}, 
+                            Defense: ${legends[i].defense}, 
+                            Magic: ${legends[i].magic}, 
+                            Difficulty: ${legends[i].difficulty}
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div>${legends[i].story}</div>
+                    </div>
+                </div>
+            </div>`;
     }
 }

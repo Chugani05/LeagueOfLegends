@@ -1,10 +1,11 @@
 /* Global style */
 body {
-    background-color: #0C0E14; /* Oscuro como el tema de LOL */
     color: #D4AF37; /* Dorado para los textos principales */
     font-family: 'Poppins', sans-serif; /* Fuente moderna */
     margin: 0;
     padding: 0;
+    background-image: url(../assets/imgs/background.jpg);
+    background-size: cover;
 }
 
 /* Header */
@@ -38,18 +39,31 @@ button:hover {
 }
 
 /* Cards */
+.card-container {
+    perspective: 1000px; /* Enables 3D flipping */
+}
+
+.card-container:hover {
+    z-index: 3;
+}
+
 .card {
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 5px;
     background-image: linear-gradient(rgb(24, 24, 24), rgb(43, 42, 42));
-    text-align: center;
-    padding: 20px;
     width: 250px; /* Set a fixed width for the cards */
+    transition: transform 0.5s;
 }
 
 .card:hover {
     transform: scale(1.25); /* Slightly enlarge the card on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+/* Style for both the front and back of the card */
+.card-front, .card-back {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
 }
 
 .name {
