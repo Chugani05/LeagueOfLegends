@@ -64,11 +64,20 @@ const showLegend = () => {
                         <img src="${legends[i].image}" alt="${legends[i].name}">
                         <div class="title">Title: ${legends[i].title}</div>
                         <div class="tags">Tags: ${legends[i].tags && legends[i].tags.length > 0 ? legends[i].tags.join(' & ') : 'No tags available'}</div>
+                        <br>
                         <div class="stats">
-                            Attack: ${legends[i].attack}, 
-                            Defense: ${legends[i].defense}, 
-                            Magic: ${legends[i].magic}, 
-                            Difficulty: ${legends[i].difficulty}
+                            <div class="stat">
+                                <img src="./assets/imgs/attack.png" class="stats-imgs"> ${legends[i].attack}
+                            </div>
+                            <div class="stat">
+                                <img src="./assets/imgs/defense.png" class="stats-imgs"> ${legends[i].defense}  
+                            </div>
+                            <div class="stat">
+                                <img src="./assets/imgs/magic.png" class="stats-imgs"> ${legends[i].magic}  
+                            </div>
+                            <div class="stat">
+                                <img src="./assets/imgs/difficulty.png" class="stats-imgs"> ${legends[i].difficulty}
+                            </div>
                         </div>
                     </div>
                     <div class="card-back">

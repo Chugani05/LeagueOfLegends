@@ -81,7 +81,7 @@ button:focus {
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.4s ease;
     transform-style: preserve-3d; /* Mantiene el contenido en 3D */
     z-index: 0;
-    padding-right: 70px;
+    padding-right: 50px;
 }
 
 .card-front, .card-back {
@@ -137,4 +137,14 @@ button:focus {
     color: white;
     margin-top: 10px;
     padding: 0px 30px 0px 15px;
+}
+
+.stats {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-imgs {
+    width: 25px;
 }
