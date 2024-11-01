@@ -1,6 +1,6 @@
 # League Of Legends
 <div align=center>
-<img src="src/assets/imgs/logo.png" alt="logo">
+<img src="src/assets/imgs/logo.png" alt="logo" width="50%">
 </div>
 
 ## Content
