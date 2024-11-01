@@ -1,4 +1,7 @@
 # League Of Legends
+<div align=center>
+<img src="src/assets/imgs/logo.png" alt="logo">
+</div>
 
 ## Content
 - [Description](#description)
