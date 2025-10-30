@@ -1,4 +1,4 @@
-# League Of Legends
+# League of Legends
 
 <div align=center>
   <img src="src/assets/imgs/logo.png" alt="logo" width="50%">
