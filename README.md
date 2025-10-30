@@ -1,7 +1,7 @@
 # League of Legends
 
 <div align=center>
-  <img src="./resourses/leagueoflegends.png" alt="final look of the project" width="80%">
+  <img src="./resourses/leagueoflegends.png" alt="final look of the project" width="100%">
 </div>
 
 ## Content
